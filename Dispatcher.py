@@ -17,7 +17,7 @@ sounder.set_filter(  {
       'tell', "give", "told", "gave", "know", "knew",
       'a', 'am', 'an', 'i', 'like', 'has', 'have', 'need',
       'will', 'be', "this", 'that', "for","hey","baby", ",","please",
-      "if","so",'kind'
+      "if","so",'kind','hello','there'
   })
 
 # ToDo make a list of functions

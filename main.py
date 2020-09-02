@@ -83,9 +83,9 @@ def wishMe():
     else:
         say+="    Good Evening Sir ! "
 
-    assname = ("     Jarvis 1 point o ")
-    say+="   I am your Assistant"
-    speak(say)
+    say+="   I am your Assistant , Now Systems are online , whit what can i help you"
+
+    AudioManager.speak(say)
 
 
 
@@ -183,14 +183,16 @@ while True==False:
 
 
 
-# wishMe()
+wishMe()
 
 
-try :
+while True:
+ try :
+
     getActions(AudioManager.myCommand())
-    getActions(AudioManager.myCommand())
-except:
-    speak("Sorry sir i did not get that ")
+
+ except:
+    speak("Sorry sir i did not get that, main caused ")
 
 
 

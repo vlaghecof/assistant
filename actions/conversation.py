@@ -6,6 +6,14 @@ import random
 
 
 
+def greetings():
+    replies = [
+        'Have a good one Sir',
+        'Hello there.',
+        'I am fully online Sir'
+    ]
+    return (random.choice(replies))
+
 
 def who_are_you():
     va_name = " "
@@ -45,7 +53,11 @@ def where_born():
 
 
 def how_are_you():
-    return ('I am fine, thank you.')
+    replies = [
+        'I am still online Sir',
+        'I am very good .'
+    ]
+    return (random.choice(replies))
 
 
 def are_you_up():
@@ -71,16 +83,18 @@ def marry_me():
 def undefined(text):
     return ('I dont know what that means!')
 
-WORDS = { who_are_you :  ['who are you '],
+WORDS = { greetings:    ['hello','hy','good day','good evening'],
+         who_are_you :  ['who are you'],
          toss_coin :     ['heads', 'tails','head or tail',
                                   'toss a coin', 'flip a coin'],
          how_am_i:       ['how  i look ','how do i look' ,'how am i'],
          who_am_i:       ['who am  i'],
          where_born:     ['where created',"who created you"],
-         how_are_you:    ['how are you','are you ok '],
+         how_are_you:    ['how are you','are you ok'],
          are_you_up:     ['you up', "you online ","system online"],
          love_you:       ['love you'],
-         marry_me:       ['marry me']
+         marry_me:       ['marry me'],
+         undefined:      [],
           }
 conversationList=[]
 for key,val in WORDS.items():
@@ -92,4 +106,4 @@ def determineCommand( text):
             if phrase in text:
                 print(phrase,key ,"->",val)
                 return key()
-    return "I did not quite got that , please repeat"
+    return "I did not quite got that , please repeat yhis message is from conversation module"

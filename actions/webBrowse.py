@@ -23,6 +23,8 @@ def note(text):
 websites= { "youtube":"https://www.youtube.com/",
             "google":"https://www.google.com",
             "github":"https://github.com/vlaghecof",
+            "git":"https://github.com/vlaghecof",
+            "it":"https://github.com/vlaghecof",
             "whatsapp":"https://web.whatsapp.com/",
             "news":"https://stirioficiale.ro/informatii",
             "school":"https://websinu.utcluj.ro/",

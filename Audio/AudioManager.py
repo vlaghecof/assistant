@@ -10,7 +10,7 @@ import settings
 num=0
 def speak(output):
     global num
-    if settings.audio==False:
+    if settings.speak==False:
         return print(output)
     num += 1
     print("PerSon : ", output)

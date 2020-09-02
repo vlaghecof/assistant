@@ -52,7 +52,8 @@ def creteProject(text):
     ]
 
     AudioManager.speak("Right away , please tell me the name")
-    name = AudioManager.myCommand()
+    # name = AudioManager.myCommand()
+    name=input("Name of the project , can also specify the type:")
 
     if "python" in text or "_py" in text or "py" in name:
         mode="py"
@@ -60,17 +61,19 @@ def creteProject(text):
         if"java" in text or "_ja" in text or "ja" in name:
             mode="ja"
 
+    name=name.split(" ")[0]
 
 
-    pythonProj=["python","_py","py"]
+
+
     if 'default' in text:
         gitFlag='l'
-        if 'git'in text:
+        if 'git'in text or "it" in text:
             gitFlag=''
 
         print(f"C:\\Users\\Vlad\\create.bat {name}_{mode} {gitFlag}")
 
-        # os.system(f"C:\\Users\\Vlad\\create.bat {name}_py l")
+        os.system(f"C:\\Users\\Vlad\\create.bat {name}_{mode} {gitFlag}")
     else:
        if "project" in text:
 

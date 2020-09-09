@@ -12,12 +12,15 @@ The project structure is as it follows
         
  the assistant can do the following
  
- open any website : keywords open name_here
+ open any website : keywords open name_here 
  search the web :  search what to be searched
+ 
  make a note:  take a note , make a note 
  get a space photo : space photo 
+ 
  system status : [default] system update 
  basic conversation module
+ 
  get a location : location place
  get a direction : from city1 to city2 
 

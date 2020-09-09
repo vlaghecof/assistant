@@ -2,13 +2,15 @@ import subprocess
 import webbrowser
 import datetime
 import requests
-from Audio.AudioManager import speak
+from Audio.AudioManager import speak,myCommand
 
 def note(text):
     speak("Im on it ")
     date = datetime.datetime.now()
     print(date)
-    message=input("What would you like me to write down? ")
+    speak("What would you like me to write down?")
+    # message=input("What would you like me to write down? ")
+    message=myCommand()
     title=input("Input the title or leave empty ")
     if title:
         file_name = title + "-note.txt"

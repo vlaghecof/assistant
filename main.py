@@ -10,18 +10,19 @@ import datetime
 import psutil
 import platform
 import webbrowser
-from actions import sleep,conversation
+
 import subprocess
 
 from Dispatcher import getActions
 from Audio import AudioManager
 from actions import System
+import settings
 
 # ToDO Clean main , add a module for for conversation to be active only partially ,
 #  think about the wake word
 #  create and open a project ,
 
-
+online=True
 def system_status():
     os, name, version, _, _, _ = platform.uname()
     version = version.split('-')[0]
@@ -60,7 +61,12 @@ def speak(output):
 
 
 
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
 
+engine.setProperty('voice', voices[0].id)
+rate = engine.getProperty('rate')
+engine.setProperty('rate', 130)
 def speaks(text):
     engine.say(text)
     engine.runAndWait()
@@ -89,12 +95,7 @@ def wishMe():
 
 
 
-engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
 
-engine.setProperty('voice', voices[0].id)
-rate = engine.getProperty('rate')
-engine.setProperty('rate', 130)
 
 def get_audio():
     r = sr.Recognizer()
@@ -168,7 +169,7 @@ while True==False:
             if "initialise "in text:
                 webbrowser.open("https://www.youtube.com/watch?v=23EfsN7vEOA&t=10s")
             if "sleep" in text:
-               speak(sleep.go_to_sleep())
+               # speak(sleep.go_to_sleep())
                active=False
             if"turn off" in text or "over" in text :
                 speak("It was a pleasure serving you ")
@@ -186,13 +187,13 @@ while True==False:
 wishMe()
 
 
-while True:
+while  settings.online:
  try :
 
     getActions(AudioManager.myCommand())
 
  except:
-    speak("Sorry sir i did not get that, main caused ")
+    AudioManager.speak("Sorry sir i did not get that, main caused ")
 
 
 

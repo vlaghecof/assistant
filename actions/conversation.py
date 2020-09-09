@@ -106,4 +106,4 @@ def determineCommand( text):
             if phrase in text:
                 print(phrase,key ,"->",val)
                 return key()
-    return "I did not quite got that , please repeat yhis message is from conversation module"
+    return "I did not quite got that , please repeat "

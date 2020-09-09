@@ -6,7 +6,6 @@ from gtts import gTTS
 
 import settings
 
-
 num=0
 def speak(output):
     global num

@@ -29,8 +29,11 @@ The project structure is as it follows
  get a direction : from city1 to city2 
  
  create project(this one has a few variants): create project (this creates a folder in the default projects folder)
+ 
                                               creates default project ( this one also crates a local git repo for the project)
+                                              
                                               create default git project (this one creates the remote git depo too)
+                                              
                                               (also when giving the name of the project you can specify a type(java python c) and it will also create a project in that language) 
 
 Note: you can formulate the command however  you want as long as 

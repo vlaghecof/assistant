@@ -34,7 +34,8 @@ The project structure is as it follows
                                               
                                               create default git project (this one creates the remote git depo too)
                                               
-                                              (also when giving the name of the project you can specify a type(java python c) and it will also create a project in that language) 
+                                              (also when giving the name of the project you can specify a type(java python c) and it will
+                                              also create a project in that language) 
 
 Note: you can formulate the command however  you want as long as 
     it contains the the trigger key words
